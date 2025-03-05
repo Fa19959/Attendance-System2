@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance Verification</title>
+<script>
+        fetch("https://api4.ipify.org?format=json") // Forces IPv4
+        .then(response => response.json())
+        .then(data => {
+            console.log("Fetched IP:", data.ip); // Log the fetched IP to the console
+            let allowedIP = "5.36.124.198"; // Replace with your Wi-Fi's public IPv4 address
+            if (data.ip === allowedIP) {
+                window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdWiAC7cKpeE79UJOsXGCJXLigw5pIi5BYLf3mmoyZ-yjltJA/viewform?usp=header"; // Replace with your Google Form link
+            } else {
+                document.body.innerHTML = "<h2 style='color: red; text-align: center;'>❌ Attendance can only be marked on the institute's Wi-Fi!</h2>";
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching IP:", error); // Log any errors to the console
+            document.body.innerHTML = "<h2 style='color: red; text-align: center;'>Error fetching IP. Please try again.</h2>";
+        });
+</script>
+</head>
+<body>
+<h2 style="text-align: center;">Checking Network Access...</h2>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
