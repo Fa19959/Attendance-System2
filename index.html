@@ -9,7 +9,7 @@
         .then(response => response.json())
         .then(data => {
             console.log("Fetched IP:", data.ip); // Log the fetched IP to the console
-            let allowedIP = "5.36.124.198"; // Replace with your Wi-Fi's public IPv4 address
+            let allowedIP = "5.36.230.230"; // Replace with your Wi-Fi's public IPv4 address
             if (data.ip === allowedIP) {
                 window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdWiAC7cKpeE79UJOsXGCJXLigw5pIi5BYLf3mmoyZ-yjltJA/viewform?usp=header"; // Replace with your Google Form link
             } else {
